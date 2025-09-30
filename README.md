@@ -12,3 +12,5 @@
   <li>Queensha Medina Muhammad | <b>UI/UX</b></li>
   <li>Inasya Anneira Velda Hidayat | <b>UI/UX</b></li>
 </ul>
+
+<h5> ORBIT SMKN 4 Bandung</h5>
