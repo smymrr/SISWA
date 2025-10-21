@@ -8,7 +8,7 @@
 <ul>
   <li>Sergian Mochamad | <b>Front-End/Project Manager</b></li>
   <li>Andikari | <b>Back-End</b></li>
-  <li>Pertama Ma'arif Nurwahid | <b>UI/UX</b></li>
+  <li>Pertama Ma'arif Nurwahid | <b>UI/UX/Front-End</b></li>
   <li>Queensha Medina Muhammad | <b>UI/UX</b></li>
   <li>Inasya Anneira Velda Hidayat | <b>UI/UX</b></li>
 </ul>
