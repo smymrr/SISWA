@@ -1,0 +1,15 @@
+main {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 40%;
+    background-color: white;
+}
