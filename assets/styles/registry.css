@@ -1,15 +1,59 @@
-main {
-  display: grid;
-  place-items: center;
-  height: 100vh;
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #ff9635;
 }
 
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
-.container {
+body {
+    background: linear-gradient(33deg, #639ab3, var(--primary-color));
+    background-size: 800% 800%;
+    background-position: center;
+    animation: gradientMove 8s ease-in-out infinite;
+}
+main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    height: 40%;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 80%;
+    border-radius: 20px;
     background-color: white;
+    overflow: hidden;
+    box-shadow: 0 0 18px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background-color: var(--primary-color);
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+.option img {
+    width: 80%;
+    height: auto;
 }

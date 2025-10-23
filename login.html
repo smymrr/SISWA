@@ -7,14 +7,21 @@
     <link rel="stylesheet" href="assets/styles/registry.css">
     <link rel="stylesheet" href="assets/styles/univ.css">
 </head>
-<body>
-    <nav class="navbar">
-        <h2>SISWA Navigation</h2>
-    </nav>
-    
+<body>    
     <main>
         <div class="container">
-            <h1>test</h1>
+            <div class="login">
+                <h1>Login</h1>
+                <form action="login" method="post" style="display: flex; flex-direction: column; gap:20px;">
+                    <input type="text" id="username" placeholder="Username" name="username" required>
+                    <input type="password" id="password" placeholder="Password" name="password" required>
+                    <button type="submit" id="login-button">Login</button>
+                </form>
+            </div>
+            
+            <div class="option">
+                <img src="assets/images/SISWA_logo.png" alt="">
+            </div>
         </div>
     </main>
 </body>
