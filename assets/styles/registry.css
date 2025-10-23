@@ -1,6 +1,7 @@
 :root {
     --primary-color: #2563eb;
     --secondary-color: #ff9635;
+    --secondary-hover: #a4662e; 
 }
 
 @keyframes gradientMove {
@@ -56,4 +57,34 @@ main {
 .option img {
     width: 80%;
     height: auto;
+}
+
+.login input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.login input:focus {
+  border-color: #5563DE;
+  box-shadow: 0 0 6px rgba(85, 99, 222, 0.4);
+  outline: none;
+}
+
+.login button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color:var(--secondary-color);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+      background-color: var(--secondary-hover);
+      color: white;
+  }
 }
