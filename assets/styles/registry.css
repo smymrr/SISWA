@@ -25,8 +25,6 @@ main {
 
 .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 60%;
     height: 80%;
     border-radius: 20px;
@@ -41,26 +39,53 @@ main {
     align-items: center;
     flex-direction: column;
     width: 50%;
-    height: 100%;
     background-color: var(--primary-color);
 }
 
+.login h1 {
+    font-size: 60px;
+    color: white;
+    margin-bottom: 50px;
+    letter-spacing: 6px;
+}
+
 .option {
+    /* Keep these properties */
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     width: 50%;
-    height: 100%;
+
+    gap: 12px;
+
+    /* CHANGE HERE: Start content from the top */
+    justify-content: center; 
+    align-items: center;
+
+    /* ADD PADDING to create space from the edges */
+    padding: 40px 20px; /* Adjust as needed */
+    box-sizing: border-box; /* Crucial for padding to work with fixed width/height */
 }
 
 .option img {
     width: 80%;
     height: auto;
+    max-height: 120px;
+    object-fit: cover;
+}
+
+.option p {
+    max-width: 90%;
+    font-size: 16px;
+    color: black;
+    text-align: justify;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .login input {
   padding: 12px 15px;
+  margin: 10px;
   border: 1px solid #ccc;
   border-radius: 10px;
   font-size: 16px;
@@ -88,3 +113,15 @@ main {
       color: white;
   }
 }
+
+#forgot-password {
+    color:#F0F0F0;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    &:hover {
+        color:var(--secondary-color);
+    }
+}
+
+
