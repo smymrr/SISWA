@@ -78,10 +78,11 @@ main {
 
 /* Style the checkbox */
 .login input[type="checkbox"] {
-  /* Hide the native checkbox */
+  /* Hilangkan checkbox default */
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+
   width: 18px;
   height: 18px;
   border: 2px solid var(--primary-color);
@@ -91,31 +92,41 @@ main {
   position: relative;
   transition: all 0.2s ease;
   vertical-align: middle;
+
+  /* Biar stabil pas diklik */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* When checked */
+/* Saat dicentang */
 .login input[type="checkbox"]:checked {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
 }
 
-/* Add the checkmark */
-.login input[type="checkbox"]:checked::after {
+/* Tanda centang */
+.login input[type="checkbox"]::after {
   content: "";
   position: absolute;
-  top: 2px;
-  left: 5px;
-  width: 4px;
+  width: 5px;
   height: 9px;
   border: solid white;
   border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
+  transform: scale(0) rotate(45deg);
+  transition: transform 0.15s ease;
 }
 
-/* Hover effect */
+/* Munculkan centang saat checked */
+.login input[type="checkbox"]:checked::after {
+  transform: scale(1) rotate(45deg);
+}
+
+/* Efek hover */
 .login input[type="checkbox"]:hover {
   border-color: var(--primary-hover);
 }
+
 
 /* Align label nicely */
 .login label {
@@ -206,6 +217,11 @@ main {
   color: white;
 }
 
+.google svg {
+    width: 5%;
+    fill: white;
+}
+
 .social-login .facebook {
   background: #1877f2;
   color: white;
@@ -259,8 +275,21 @@ main {
     color: white;
     width: 80%;
     font-weight: normal;
+    font-size: 20px;
     margin-bottom: 24px;
     text-align: center;
+    /* Tambahan garis kiri–kanan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* jarak antara teks dan garis */
+}
+
+.option h2::before,
+.option h2::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* garis putih transparan */
 }
 
 .option button {
