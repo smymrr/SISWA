@@ -1,7 +1,10 @@
 :root {
     --primary-color: #2563eb;
+    --primary-hover: #1e40af;
     --secondary-color: #ff9635;
     --secondary-hover: #a4662e; 
+
+    --symbolic-font: "PT Serif", serif;
 }
 
 @keyframes gradientMove {
@@ -11,11 +14,12 @@
 }
 
 body {
-    background: linear-gradient(33deg, #639ab3, var(--primary-color));
+    background: linear-gradient(33deg, #244ca3, #396ac5, var(--primary-color));
     background-size: 800% 800%;
     background-position: center;
-    animation: gradientMove 8s ease-in-out infinite;
+    animation: gradientMove 15s ease-in-out infinite;
 }
+
 main {
     display: flex;
     justify-content: center;
@@ -28,7 +32,6 @@ main {
     width: 60%;
     height: 80%;
     border-radius: 20px;
-    background-color: white;
     overflow: hidden;
     box-shadow: 0 0 18px 10px rgba(0, 0, 0, 0.2);
 }
@@ -39,55 +42,29 @@ main {
     align-items: center;
     flex-direction: column;
     width: 50%;
-    background-color: var(--primary-color);
+    background-color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 60%;
 }
 
 .login h1 {
+    font-family: var(--symbolic-font);
     font-size: 60px;
-    color: white;
+    color: var(--primary-color);
     margin-bottom: 50px;
     letter-spacing: 6px;
 }
 
-.option {
-    /* Keep these properties */
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-
-    gap: 12px;
-
-    /* CHANGE HERE: Start content from the top */
-    justify-content: center; 
-    align-items: center;
-
-    /* ADD PADDING to create space from the edges */
-    padding: 40px 20px; /* Adjust as needed */
-    box-sizing: border-box; /* Crucial for padding to work with fixed width/height */
-}
-
-.option img {
-    width: 80%;
-    height: auto;
-    max-height: 120px;
-    object-fit: cover;
-}
-
-.option p {
-    max-width: 90%;
-    font-size: 16px;
-    color: black;
-    text-align: justify;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 10px;
-}
-
 .login input {
   padding: 12px 15px;
-  margin: 10px;
+  margin-top: 10px;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 16px;
   transition: all 0.3s ease;
 }
@@ -101,27 +78,84 @@ main {
 .login button {
   padding: 12px 20px;
   border: none;
-  border-radius: 10px;
-  background-color:var(--secondary-color);
+  border-radius: 5px;
+  background-color:var(--primary-color);
   color: white;
   font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
   
   &:hover {
-      background-color: var(--secondary-hover);
+      background-color: var(--primary-hover);
       color: white;
   }
 }
 
 #forgot-password {
-    color:#F0F0F0;
+    align-self: flex-end;
+    color: var(--primary-color);
+    text-decoration: none;
     font-size: 14px;
     cursor: pointer;
     transition: color 0.3s ease;
     &:hover {
-        color:var(--secondary-color);
+        text-decoration: underline;
     }
 }
 
 
+.option {
+    /* Keep these properties */
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+
+    background: linear-gradient(to right, #1b52d4 1%, var(--primary-color) 99%);
+
+    /* ADD PADDING to create space from the edges */
+    padding: 100px 20px; /* Adjust as needed */
+    box-sizing: border-box; /* Crucial for padding to work with fixed width/height */
+}
+
+.option img {
+    width: 80%;
+    height: auto;
+    max-height: 120px;
+    object-fit: cover;
+}
+
+.option h1 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.option h2 {
+    color: white;
+    width: 80%;
+    font-weight: normal;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.option button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background-color: #f0f0f0;
+        color: var(--primary-hover);
+    }
+}

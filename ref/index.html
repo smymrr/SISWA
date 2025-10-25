@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk - Luarkampus | Platform Beasiswa No.1 di Indonesia</title>
+    <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Simulasi ikon Font Awesome, dalam produksi gunakan: 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        */
+        .icon {
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+        }
+        .icon-hat:before { content: "🎓"; }
+        .icon-book:before { content: "📘"; }
+        .icon-document:before { content: "📄"; }
+        .icon-calendar:before { content: "🗓️"; }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <div class="feature-panel">
+            <header class="logo-header">
+                <h1 class="logo-text">Luarkampus</h1>
+                <p class="tagline">Platform Beasiswa No.1 di Indonesia</p>
+            </header>
+
+            <div class="content-section">
+                <h2 class="main-heading">Lebih mudah untuk akses <br> **ribuan informasi beasiswa**</h2>
+                
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="icon-circle"><span class="icon icon-hat"></span></div>
+                        <div class="text-content">
+                            <h3>Rekomendasi Beasiswa Otomatis</h3>
+                            <p>100% sesuai profil diri</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="icon-circle"><span class="icon icon-book"></span></div>
+                        <div class="text-content">
+                            <h3>Dibimbing Mendaftar Tiap Beasiswa</h3>
+                            <p>500+ video kelas dan forum konsultasi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="icon-circle"><span class="icon icon-document"></span></div>
+                        <div class="text-content">
+                            <h3>Contoh Dokumen Beasiswa</h3>
+                            <p>100+ contoh esai penerima beasiswa</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="icon-circle"><span class="icon icon-calendar"></span></div>
+                        <div class="text-content">
+                            <h3>Kalender Event dan Beasiswa</h3>
+                            <p>Akses info peluang prestasi dan beasiswa sepanjang tahun</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="login-panel">
+            <div class="login-container">
+                <h2 class="welcome-heading">Selamat Datang Kembali</h2>
+                <p class="login-subtext">Masuk dengan akun kamu yang sudah terdaftar</p>
+
+                <form action="#" method="POST" class="login-form">
+                    
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Masukkan alamat email akun kamu" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Kata Sandi</label>
+                        <input type="password" id="password" name="password" placeholder="Masukkan kata sandi akun kamu" required>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" name="remember" checked>
+                            <span class="checkmark"></span>
+                            Ingat saya
+                        </label>
+                        <a href="#" class="forgot-link">Lupa kata sandi</a>
+                    </div>
+
+                    <button type="submit" class="login-btn primary-btn">Masuk</button>
+                    
+                    <div class="divider">ATAU</div>
+
+                    <button type="button" class="login-btn google-btn">
+                        <svg viewBox="0 0 48 48" width="18px" height="18px" style="margin-right: 8px;">
+                            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.343c-1.189,5.875-6.195,8.875-11.343,8.875c-6.625,0-12-5.375-12-12c0-6.625,5.375-12,12-12c3.047,0,5.687,1.171,7.703,2.914l5.594-5.594C34.469,2.839,29.187,0,24,0C10.75,0,0,10.75,0,24c0,13.25,10.75,24,24,24c14.281,0,22.75-9.375,22.75-22.75c0-1.563-0.125-3.125-0.406-4.687H43.611z"/>
+                            <path fill="#FF3D00" d="M6.343,19.983L12.5,26.133c1.921-2.02,4.408-3.178,7.098-3.178c3.016,0,5.625,1.141,7.703,2.914l5.594-5.594C30.43,8.839,27.187,7.25,24,7.25c-5.75,0-10.75,2.438-14.219,6.562L6.343,19.983z"/>
+                            <path fill="#4CAF50" d="M24,48c-6.75,0-12.875-2.812-17.187-7.375L12.5,35.133c3.094,2.969,7.344,4.875,11.5,4.875c4.781,0,8.875-1.5,11.25-3.875l-5.719-4.156C29.125,31.75,27.062,32,24,32c-5.141,0-9.625-2.281-12.719-5.906L5.594,30.312C9.562,36.031,16.25,40,24,40c7.844,0,14.656-3.875,18.594-9.687L36.094,26.406C34.078,30.297,29.359,32.75,24,32.75z"/>
+                            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.343c-1.189,5.875-6.195,8.875-11.343,8.875c-6.625,0-12-5.375-12-12c0-6.625,5.375-12,12-12c3.047,0,5.687,1.171,7.703,2.914l5.594-5.594C34.469,2.839,29.187,0,24,0C10.75,0,0,10.75,0,24c0,13.25,10.75,24,24,24c14.281,0,22.75-9.375,22.75-22.75c0-1.563-0.125-3.125-0.406-4.687H43.611z"/>
+                        </svg>
+                        Lanjutkan dengan Google
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

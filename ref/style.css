@@ -1,0 +1,325 @@
+/* Mengatur font dasar dan latar belakang luar */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5; /* Latar belakang luar abu-abu sangat muda */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container utama untuk dua panel */
+.main-wrapper {
+    display: flex;
+    width: 85%;
+    max-width: 1200px;
+    height: 80vh;
+    min-height: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* ---------------------------------- */
+/* Panel Kiri: Fitur (Biru Tua) */
+/* ---------------------------------- */
+.feature-panel {
+    flex: 1.2; /* Lebih besar dari panel login */
+    background-color: #00224D; /* Warna Biru Tua Luarkampus */
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.logo-header {
+    margin-bottom: 50px;
+}
+
+.logo-text {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin: 0;
+}
+
+.tagline {
+    font-size: 0.8em;
+    font-weight: 400;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+.content-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.main-heading {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+.main-heading strong {
+    font-weight: 700;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.icon-circle {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding: 8px;
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+/* Styling ikon dari simulasi di HTML */
+.icon {
+    color: #ffd700; /* Warna Emas untuk ikon */
+}
+
+.text-content h3 {
+    font-size: 1em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.text-content p {
+    font-size: 0.85em;
+    margin: 0;
+    opacity: 0.7;
+}
+
+/* ---------------------------------- */
+/* Panel Kanan: Login Form (Putih) */
+/* ---------------------------------- */
+.login-panel {
+    flex: 1;
+    background-color: white;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 380px;
+}
+
+.welcome-heading {
+    font-size: 1.7em;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.login-subtext {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007bff; /* Border biru saat fokus */
+    outline: none;
+}
+
+/* Checkbox dan Lupa Sandi */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+
+.forgot-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Custom Checkbox Styling (Mirip tampilan Luarkampus) */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    user-select: none;
+    color: #555;
+}
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+    left: 6px;
+    top: 3px;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Tombol */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.primary-btn {
+    background-color: #007bff; /* Warna biru primer */
+    color: white;
+    margin-bottom: 20px;
+}
+.primary-btn:hover {
+    background-color: #0056b3;
+}
+
+.divider {
+    text-align: center;
+    color: #aaa;
+    margin: 20px 0;
+    font-size: 0.85em;
+    position: relative;
+}
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #eee;
+    z-index: 1;
+}
+.divider {
+    background: white;
+    padding: 0 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+
+.google-btn {
+    background-color: #f5f5f5; /* Warna abu-abu muda untuk Google */
+    color: #3c4043;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+}
+.google-btn:hover {
+    background-color: #ebebeb;
+}
+
+/* ---------------------------------- */
+/* Responsivitas */
+/* ---------------------------------- */
+@media (max-width: 992px) {
+    .main-wrapper {
+        flex-direction: column; /* Ubah ke satu kolom pada layar kecil */
+        height: auto;
+        width: 90%;
+        min-height: auto;
+    }
+
+    .feature-panel {
+        padding: 30px;
+        flex: auto;
+    }
+
+    .login-panel {
+        padding: 40px 30px;
+        flex: auto;
+    }
+
+    .content-section {
+        padding-right: 0;
+        justify-content: flex-start;
+    }
+    
+    .main-heading {
+        font-size: 1.6em;
+        text-align: center;
+    }
+    .feature-list {
+        align-items: center;
+        text-align: left;
+    }
+    .feature-item {
+        width: 100%;
+        max-width: 350px;
+    }
+}

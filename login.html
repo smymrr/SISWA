@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,29 @@
     <link rel="stylesheet" href="assets/styles/registry.css">
     <link rel="stylesheet" href="assets/styles/univ.css">
 </head>
-<body>    
+
+<body>
     <main>
         <div class="container">
+            <div class="option">
+                <img src="assets/images/SISWA_white.png" alt="">
+                <h1>Teman pendidikan terbaikmu!</h1>
+                <h2>Belum punya akun? Daftar sekarang dan bergabunglah dengan komunitas kami!</h2>
+
+                <a href="register.html"><button id="register-button">Daftar Sekarang</button></a>
+            </div>
+
             <div class="login">
                 <h1><i><b>LOGIN</b></i></h1>
-                <form action="login" method="post" style="display: flex; flex-direction: column; gap: 15px;">
-                    <input type="text" id="username" placeholder="Username" name="username" required>
-                    <input type="password" id="password" placeholder="Password" name="password" required>
-                    <button type="submit" id="login-button">Login</button>
-                    <div class="extra-links">
-                       <a href="#" id="forgot-password">Lupa Kata Sandi?</a>
-                     </div>                
+                <form action="login" method="post" class="form">
+                    <input type="text" id="email" placeholder="Masukkan alamat email akun mu" name="email" required>
+                    <input type="password" id="password" placeholder="Masukkan kata sandi akun mu" name="password" required>
+                    <a href="#" id="forgot-password">Lupa Kata Sandi?</a>
+                    <button type="submit" id="login-button">Masuk</button>
                 </form>
-            </div>
-            
-            <div class="option">
-                <img src="assets/images/SISWA_logo.png" alt="">
-                <p>
-                SISWA adalah platform web yang dirancang untuk membantu pelajar Indonesia menemukan berbagai peluang beasiswa dan mengenal universitas di seluruh negeri.
-                Tujuan kami adalah membuat informasi tentang pendidikan tinggi menjadi lebih mudah diakses, terpercaya, dan terorganisir — semuanya dalam satu tempat.
-                </p>
-                <h1>test</h1>
             </div>
         </div>
     </main>
 </body>
+
 </html>
