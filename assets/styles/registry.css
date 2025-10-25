@@ -27,6 +27,7 @@ main {
     height: 100vh;
 }
 
+/* MAIN FRAME */
 .container {
     display: flex;
     width: 60%;
@@ -54,7 +55,7 @@ main {
 
 .login h1 {
     font-family: var(--symbolic-font);
-    font-size: 60px;
+    font-size: 80px;
     color: var(--primary-color);
     margin-bottom: 50px;
     letter-spacing: 6px;
@@ -74,6 +75,58 @@ main {
   box-shadow: 0 0 6px rgba(85, 99, 222, 0.4);
   outline: none;
 }
+
+/* Style the checkbox */
+.login input[type="checkbox"] {
+  /* Hide the native checkbox */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  vertical-align: middle;
+}
+
+/* When checked */
+.login input[type="checkbox"]:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Add the checkmark */
+.login input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Hover effect */
+.login input[type="checkbox"]:hover {
+  border-color: var(--primary-hover);
+}
+
+/* Align label nicely */
+.login label {
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
 
 .login button {
   padding: 12px 20px;
@@ -104,6 +157,71 @@ main {
     }
 }
 
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #777;
+  margin: 20px 0;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.separator:not(:empty)::before {
+  margin-right: .75em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: .75em;
+}
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-login button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.social-login svg {
+    width: 5%;
+    margin-right: 10px;
+}
+
+.social-login .google {
+  background: #db4437;
+  color: white;
+}
+
+.social-login .facebook {
+  background: #1877f2;
+  color: white;
+}
+
+.facebook svg {
+    width: 5%;
+    fill: white;
+}
+
+.social-login button:hover {
+  opacity: 0.9;
+}
+
+
+/* LEFT HAND */
 
 .option {
     /* Keep these properties */
@@ -133,6 +251,8 @@ main {
     color: white;
     margin-top: 0;
     margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .option h2 {
