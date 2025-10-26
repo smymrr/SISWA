@@ -71,7 +71,7 @@ main {
 }
 
 .login input:focus {
-  border-color: #5563DE;
+  border-color: var(--primary-color);
   box-shadow: 0 0 6px rgba(85, 99, 222, 0.4);
   outline: none;
 }
@@ -91,7 +91,7 @@ main {
   cursor: pointer;
   position: relative;
   transition: all 0.2s ease;
-  vertical-align: middle;
+  margin: 0;
 
   /* Biar stabil pas diklik */
   display: inline-flex;
@@ -131,6 +131,7 @@ main {
 /* Align label nicely */
 .login label {
   font-size: 14px;
+  margin-top: 20px;
   color: #333;
   display: flex;
   align-items: center;
