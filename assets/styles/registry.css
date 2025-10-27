@@ -235,8 +235,8 @@ main {
 
 .social-login button:hover {
   opacity: 0.9;
+  background: linear-gradient(90deg, #c9c9c9, white);
 }
-
 
 /* LEFT HAND */
 
