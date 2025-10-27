@@ -157,6 +157,37 @@ main {
   }
 }
 
+/* Add these new styles to your registry.css file */
+
+/* 1. Wrapper to enable relative positioning */
+.password-wrapper {
+    position: relative;
+    display: flex; /* Helps the input fill the space */
+    align-items: center;
+    /* This negates the gap: 15px from the form, so we add a specific margin below */
+    margin-bottom: 15px; 
+}
+
+/* 2. Style the password input inside the wrapper */
+.password-wrapper input[type="password"] {
+    /* Ensures the input takes up the available width */
+    flex-grow: 1; 
+    /* Add extra padding on the right side to prevent text going under the icon */
+    padding-right: 40px; 
+    margin-top: 0; /* Remove margin from the specific input */
+}
+
+/* 3. Style and position the icon */
+.toggle-password {
+    position: absolute;
+    right: 15px; /* Adjust distance from the right edge */
+    top: 30%;
+    cursor: pointer;
+    color: #888; /* Icon color */
+    font-size: 18px;
+    z-index: 10;
+}
+
 #forgot-password {
     align-self: flex-end;
     color: var(--primary-color);
