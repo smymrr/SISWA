@@ -91,7 +91,6 @@ main {
   cursor: pointer;
   position: relative;
   transition: all 0.2s ease;
-  margin: 0;
 
   /* Biar stabil pas diklik */
   display: inline-flex;
@@ -117,28 +116,23 @@ main {
   transition: transform 0.15s ease;
 }
 
-/* Munculkan centang saat checked */
 .login input[type="checkbox"]:checked::after {
   transform: scale(1) rotate(45deg);
 }
 
-/* Efek hover */
 .login input[type="checkbox"]:hover {
   border-color: var(--primary-hover);
 }
 
-
-/* Align label nicely */
+/* In your registry.css/univ.css */
 .login label {
-  font-size: 14px;
-  margin-top: 20px;
-  color: #333;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
 }
-
 
 .login button {
   padding: 12px 20px;
@@ -157,39 +151,35 @@ main {
   }
 }
 
-/* Add these new styles to your registry.css file */
-
-/* 1. Wrapper to enable relative positioning */
 .password-wrapper {
     position: relative;
-    display: flex; /* Helps the input fill the space */
+    display: flex;
     align-items: center;
-    /* This negates the gap: 15px from the form, so we add a specific margin below */
-    margin-bottom: 15px; 
 }
 
-/* 2. Style the password input inside the wrapper */
-.password-wrapper input[type="password"] {
-    /* Ensures the input takes up the available width */
+.password-wrapper input {
     flex-grow: 1; 
-    /* Add extra padding on the right side to prevent text going under the icon */
     padding-right: 40px; 
-    margin-top: 0; /* Remove margin from the specific input */
+    margin-top: 0;
 }
 
-/* 3. Style and position the icon */
 .toggle-password {
     position: absolute;
-    right: 15px; /* Adjust distance from the right edge */
+    right: 15px;
     top: 30%;
     cursor: pointer;
-    color: #888; /* Icon color */
+    color: #888;
     font-size: 18px;
     z-index: 10;
 }
 
+.checkbox-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #forgot-password {
-    align-self: flex-end;
     color: var(--primary-color);
     text-decoration: none;
     font-size: 14px;
@@ -199,6 +189,10 @@ main {
         text-decoration: underline;
     }
 }
+
+/*
+LEFT SIDE
+*/
 
 .separator {
   display: flex;
@@ -239,19 +233,9 @@ main {
   transition: 0.2s;
 }
 
-.social-login svg {
-    width: 5%;
-    margin-right: 10px;
-}
-
 .social-login .google {
   background: #db4437;
   color: white;
-}
-
-.google svg {
-    width: 5%;
-    fill: white;
 }
 
 .social-login .facebook {
@@ -259,17 +243,9 @@ main {
   color: white;
 }
 
-.facebook svg {
-    width: 5%;
-    fill: white;
-}
-
 .social-login button:hover {
   opacity: 0.9;
-  background: linear-gradient(90deg, #c9c9c9, white);
 }
-
-/* LEFT HAND */
 
 .option {
     /* Keep these properties */
