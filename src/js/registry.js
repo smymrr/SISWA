@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     const togglePasswordIcons = document.querySelectorAll(".toggle-password");
-
     togglePasswordIcons.forEach(icons => {
         icons.addEventListener("click", function() {
             const targetId = this.getAttribute("data-target");
