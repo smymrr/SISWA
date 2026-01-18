@@ -2,15 +2,23 @@
     --primary-color: #2563eb;
     --primary-hover: #1e40af;
     --secondary-color: #ff9635;
-    --secondary-hover: #a4662e; 
+    --secondary-hover: #a4662e;
 
     --symbolic-font: "PT Serif", serif;
 }
 
 @keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 body {
@@ -24,7 +32,6 @@ main {
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow: hidden;
     min-height: 100vh;
     min-height: 100dvh;
     width: 100%;
@@ -32,12 +39,26 @@ main {
     box-sizing: border-box;
 }
 
+/*
+=================
+    BLOB
+=================
+*/
+
+.blob-layer {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
 #blob-up-left-solid,
 #blob-up-right-outline,
 #blob-down-right-solid,
 #blob-down-left-solid,
 #blob-down-left-outline {
-    position: fixed;
+    position: absolute;
     pointer-events: none;
     border-radius: 50%;
     z-index: -1;
@@ -84,7 +105,11 @@ main {
     z-index: -2;
 }
 
-/* LOGIN CONTAINER */
+/*
+=================
+    LOGIN
+=================
+*/
 
 .logo {
     width: 150px;
@@ -116,19 +141,19 @@ main {
 }
 
 .login-container input {
-  padding: 12px 15px;
-  margin-top: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  gap: 20px;
+    padding: 12px 15px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    gap: 20px;
 }
 
 .login-container input:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 6px rgba(85, 99, 222, 0.4);
-  outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 6px rgba(85, 99, 222, 0.4);
+    outline: none;
 }
 
 .login-container label {
@@ -141,20 +166,20 @@ main {
 }
 
 .login-container button {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color:var(--primary-color);
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  
-  &:hover {
-      background-color: var(--primary-hover);
-      color: white;
-  }
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: var(--primary-hover);
+        color: white;
+    }
 }
 
 .password-wrapper {
@@ -164,8 +189,8 @@ main {
 }
 
 .password-wrapper input {
-    flex-grow: 1; 
-    padding-right: 40px; 
+    flex-grow: 1;
+    padding-right: 40px;
     margin-top: 0;
 }
 
@@ -192,13 +217,16 @@ main {
     font-size: 14px;
     cursor: pointer;
     transition: color 0.3s ease;
+
     &:hover {
         text-decoration: underline;
     }
 }
 
 /*
-SEPARATOR AND SOCIAL LOGIN
+=================
+    SEPARATOR 
+=================
 */
 
 .separator {
@@ -208,7 +236,8 @@ SEPARATOR AND SOCIAL LOGIN
     margin: 20px 0;
 }
 
-.separator h2 {
+.separator h2,
+.separator-desktop h2 {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -218,23 +247,53 @@ SEPARATOR AND SOCIAL LOGIN
 }
 
 .separator h2::before,
-.separator h2::after {
+.separator h2::after,
+.separator-desktop h2::before,
+.separator-desktop h2::after {
     content: "";
     flex: 1;
     height: 1px;
     background: var(--primary-color);
 }
 
-/* SOCIAL LOGIN */
+.separator-desktop {
+    display: none;
+}
 
-.social-container {
+/* 
+=================
+    SOCIAL
+=================
+*/
+
+.logo2 {
+    display: none;
+}
+
+.slogan {
+    display: none;
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.options {
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
-.social-container button {
+.social-mobile-version {
+    display: flex;
+    gap: 20px;
+}
+
+.social-mobile-version button {
     padding: 10px;
     width: 50px;
     height: 50px;
@@ -245,21 +304,40 @@ SEPARATOR AND SOCIAL LOGIN
     transition: 0.2s;
 }
 
-.social-container i {
+.social-desktop-version {
+    display: none;
+    gap: 20px;
+}
+
+.social-desktop-version button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.social-desktop-version i {
     font-size: 1.5rem;
 }
 
-.social-container .google {
+.options #google {
     background: #db4437;
     color: white;
 }
 
-.social-container .facebook {
+.options #facebook {
     background: #1877f2;
     color: white;
 }
 
-.social-container button:hover {
+.options button:hover {
     opacity: 0.9;
 }
 
@@ -273,9 +351,24 @@ SEPARATOR AND SOCIAL LOGIN
     color: var(--secondary-color);
     text-decoration: none;
     font-weight: bold;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
+.Daftar {
+    display: none;
+}
+
+/*
+=================
+    MEDIA QUERY
+=================
+*/
+
 @media (max-height: 812px) {
+
     #blob-up-left-solid,
     #blob-up-right-outline,
     #blob-down-right-solid,
@@ -285,11 +378,125 @@ SEPARATOR AND SOCIAL LOGIN
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
+
+    #blob-up-left-solid,
+    #blob-up-right-outline,
+    #blob-down-right-solid,
+    #blob-down-left-solid,
+    #blob-down-left-outline {
+        display: none;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(33deg, #244ca3, #396ac5, var(--primary-color));
+        background-size: 800% 800%;
+        background-position: center;
+        animation: gradientMove 15s ease-in-out infinite;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        width: min(1200px, 90%);
+        height: 80vh;
+        max-height: 90vh;
+        min-height: 0;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 18px 10px rgba(0, 0, 0, 0.2);
+        padding: 0;
+    }
+
     .logo {
         display: none;
     }
+
+    .logo2 {
+        display: inline-block;
+    }
+
+    .slogan {
+        display: block;
+    }
+
+    .social-mobile-version {
+        display: none;
+    }
+
+    .social-desktop-version {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .options,
+    .login-container {
+        height: 100%;
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        background: linear-gradient(to right, #1b52d4 1%, var(--primary-color) 99%);
+        padding: 100px 20px;
+    }
+
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+    }
+
     .login-container h1 {
         font-size: 4rem;
+        line-height: 1;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .separator-desktop {
+        display: flex;
+        width: 80%;
+        gap: 15px;
+        margin: 20px 0;
+    }
+
+    .separator-desktop h2 {
+        color: white;
+        font-size: 1rem;
+        font-weight: normal;
+    }
+
+    .separator-desktop h2::before,
+    .separator-desktop h2::after {
+        background: white;
+    }
+
+    .Daftar {
+        display: flex;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: white;
+        color: var(--primary-color);
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #f0f0f0;
+            color: var(--primary-hover);
+        }
     }
 }
