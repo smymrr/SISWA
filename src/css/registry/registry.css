@@ -320,3 +320,10 @@ LEFT SIDE
         color: var(--primary-hover);
     }
 }
+
+@media (min-width: 1024px) {
+    .container {
+        width: 60%;
+        height: 80%;
+    }
+}
