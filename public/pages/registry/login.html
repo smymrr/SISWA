@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SISWA</title>
+    <title>SISWA | Masuk</title>
 
     <!-- FavIcons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/public/images/favicons/apple-touch-icon.png">
@@ -22,50 +22,72 @@
 </head>
 
 <body>
-    <main>
-        <div class="container">
-            <div class="option">
-                <img src="/public/images/SISWA_white.png" alt="">
-                <h1>Jadikan impian kuliahmu nyata!</h1>
-                <!-- Login facebook/google -->
-                <div class="social-login">
-                    <button class="google">
-                        <i class="fa-brands fa-google"></i>
-                        Login dengan Google
-                    </button>
-                    <button class="facebook">
-                        <i class="fa-brands fa-facebook"></i>
-                        Login dengan Facebook
-                    </button>
+    <main class="auth--login">
+        <div class="blob-layer">
+            <div id="blob-up-left-solid"></div>
+            <div id="blob-up-right-outline"></div>
+            <div id="blob-down-left-solid"></div>
+            <div id="blob-down-left-outline"></div>
+            <div id="blob-down-right-solid"></div>
+        </div>
 
+        <section class="login-container">
+            <img src="/public/images/GradCap2.png" alt="SISWA Logo" class="logo">
+            <h1><b><i>LOGIN</i></b></h1>
+            <form class="form" action="login" method="post">
+                <input type="email" id="email" name="email" placeholder="Alamat email" required>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Kata sandi" name="password" required>
+                    <i class="fa-solid fa-eye-slash toggle-password" data-target="password"></i>
                 </div>
-                
+
+                <div id="forgot-password-container">
+                    <a href="#" id="forgot-password">Lupa Kata Sandi?</a>
+                </div>
+
+                <button type="submit" class="btn-primary">Masuk</button>
+            </form>
+
+            <div class="separator">
+                <h2>Atau login dengan</h2>
+            </div>
+        </section>
+
+        <section class="options">
+            <img class="logo2" src="/public/images/SISWA_white.png" alt="">
+            <h1 class="slogan">Jadikan impian kuliahmu nyata!</h1>
+
+            <div class="social-mobile-version">
+                <button id="google">
+                    <i class="fa-brands fa-google"></i>
+                </button>
+                <button id="facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </button>
+            </div>
+
+            <div class="social-desktop-version">
+                <button id="google">
+                    <i class="fa-brands fa-google"></i>
+                    Masuk dengan Google
+                </button>
+                <button id="facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                    Masuk dengan Facebook
+                </button>
+            </div>
+
+            <div class="separator-desktop">
                 <h2>Belum punya akun?</h2>
-
-                <a href="/public/pages/registry/register.html"><button id="register-button">Daftar Sekarang</button></a>
             </div>
 
-            <div class="login">
-                <h1><i><b>LOGIN</b></i></h1>
-                <form action="login" method="post" class="form">
-                    <input type="text" id="email" placeholder="Masukkan alamat email akun mu" name="email" required>
+            <a class="Daftar" href="register.html">Daftar Sekarang</a>
+        </section>
 
-                    <div class="password-wrapper">
-                        <input type="password" id="password" placeholder="Masukkan kata sandi akun mu" name="password"
-                            required>
-                        <i class="fa-solid fa-eye-slash toggle-password" data-target="password"></i>
-                    </div>
-
-                    <div class="checkbox-row">
-                        <label for="remember"><input type="checkbox" id="remember" name="remember">Ingat</label>
-                        <a href="#" id="forgot-password">Lupa Kata Sandi?</a>
-                    </div>
-                    <button type="submit" id="login-button">Masuk</button>
-                </form>
-            </div>
+        <h2 class="no-account">Belum punya akun? <a href="register.html"">Daftar Sekarang</a></h2>
     </main>
 
-    <script src="/src/js/registry.js"></script>
+    <script src=" /src/js/registry.js"></script>
 </body>
 
 </html>
