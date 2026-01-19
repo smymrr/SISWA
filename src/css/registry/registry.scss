@@ -134,7 +134,7 @@ main {
 
 .login-container h1 {
     font-family: var(--symbolic-font);
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--primary-color);
     letter-spacing: 4px;
     margin: 0 0 40px 0;
@@ -204,7 +204,6 @@ main {
     z-index: 10;
 }
 
-
 #forgot-password-container {
     display: flex;
     justify-content: flex-end;
@@ -268,10 +267,10 @@ main {
 }
 
 .SnKCheckbox {
-    display: flex;
-    align-items: flex-start;
+    display: inline;
+    line-height: 1.4;
+    align-items: center;
     color: var(--primary-color);
-    gap: 10px;
     font-size: 14px;
     line-height: 1.4;
     cursor: pointer;
@@ -280,6 +279,7 @@ main {
 .SnKCheckbox a {
     color: var(--secondary-color);
     text-decoration: none;
+    margin: 0;
 
     &:hover {
         text-decoration: underline;
@@ -367,6 +367,10 @@ main {
     transition: 0.2s;
 }
 
+.social-mobile-version i {
+    font-size: 1.5rem;
+}
+
 .social-desktop-version {
     display: none;
     gap: 20px;
@@ -438,6 +442,15 @@ main {
     #blob-down-left-solid,
     #blob-down-left-outline {
         display: none;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .login-container h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
     }
 }
 
@@ -522,6 +535,11 @@ main {
     .social-mobile-version {
         display: none;
     }
+
+    #forgot-password-container {
+        display: flex;
+    }
+
 
     .social-desktop-version {
         display: flex;
