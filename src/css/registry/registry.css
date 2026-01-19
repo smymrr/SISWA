@@ -175,11 +175,11 @@ main {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
+}
 
-    &:hover {
-        background-color: var(--primary-hover);
-        color: white;
-    }
+.login-container button:hover {
+    background-color: var(--primary-hover);
+    color: white;
 }
 
 .password-wrapper {
@@ -558,11 +558,11 @@ main {
         cursor: pointer;
         text-decoration: none;
         transition: all 0.3s ease;
+    }
 
-        &:hover {
-            background-color: #f0f0f0;
-            color: var(--primary-hover);
-        }
+    .Daftar:hover {
+        background-color: #f0f0f0;
+        color: var(--primary-hover);
     }
 
     /*
